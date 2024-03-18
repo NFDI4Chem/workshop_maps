@@ -1,0 +1,17 @@
+name: Build Maps
+on: [push]
+jobs:
+  create-images:
+    runs-on: python:3.11
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: install requirements
+        run: pip install -r requirements.txt
+      - name: run script
+        run: python3 germany_plot_v04.py
+      - name: Archive images
+        uses: actions/upload-artifact@v4
+        with:
+          name: images
+          path: output/*
