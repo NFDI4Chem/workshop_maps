@@ -1,0 +1,17 @@
+stages: 
+  - run
+
+create-images:
+  image: python:3.11
+
+  stage: run
+
+  before_script:
+  - pip install -r requirements.txt
+
+  script:
+    - python3 germany_plot_v04.py
+
+  artifacts:
+    paths:
+      - output
