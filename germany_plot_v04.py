@@ -10,8 +10,8 @@ p = pathlib.Path("output/")
 p.mkdir(parents=True, exist_ok=True)
 
 # output file names
-#output="germany_workshops_annotated_rdm.png"
-output="germany_workshops_annotated_chemotion.png"
+output="germany_workshops_annotated_rdm.png"
+# output="germany_workshops_annotated_chemotion.png"
 outputlegend="legend_%s"%(output)
 
 output = "output/" + output
@@ -50,9 +50,9 @@ while m <2 :
 	mapdf = tmpdf[df["LEVL_CODE"]==1]
 
 	#load information from location.dat
-#	city, long, lat, status, topic, kind = np.loadtxt("location_rdm.dat", unpack=True, dtype='str')
+	city, long, lat, status, topic, kind = np.loadtxt("location_rdm.dat", unpack=True, dtype='str')
 #	city, long, lat, status, topic, kind = np.loadtxt("location_chemotion.dat", unpack=True, dtype='str')
-	city, long, lat, status, topic, kind = np.loadtxt("location.dat", unpack=True, dtype='str')
+#	city, long, lat, status, topic, kind = np.loadtxt("location.dat", unpack=True, dtype='str')
 
 	#define figure
 	fig=plt.figure(figsize=(4,4), dpi=300)
@@ -88,21 +88,21 @@ while m <2 :
 				if labelcheck[1] == 0:
 					topiclabel = 'RDM (planned)'
 					labelcheck[1] = 1
-		#else:
-		#	markersymbol = 's'
-		#	if status[n] =='done':
-		#		colordata = nfdi4chempetrol
-		#		if labelcheck[2] == 0:
-		#			topiclabel = 'Chemotion ELN (past)'
-		#			labelcheck[2] = 1
-		#	else:
-		#		colordata = nfdi4chemorange
-		#		if labelcheck[3] == 0:
-		#			topiclabel = 'Chemotion ELN (planned)'
-		#			labelcheck[3] = 1
+		else:
+			markersymbol = 's'
+			if status[n] =='done':
+				colordata = nfdi4chempetrol
+				if labelcheck[2] == 0:
+					topiclabel = 'Chemotion ELN (past)'
+					labelcheck[2] = 1
+			else:
+				colordata = nfdi4chemorange
+				if labelcheck[3] == 0:
+					topiclabel = 'Chemotion ELN (planned)'
+					labelcheck[3] = 1
 
-		##avoid distortion of the plot by treating the coordinates right
-		## change markersize when multiple events are at the same location
+		#avoid distortion of the plot by treating the coordinates right
+		# change markersize when multiple events are at the same location
 		if city[n] in citychecklist:
 			if citychecklist.count(city[n]) ==1:
 				latfloat=float(lat[n])-0.3
