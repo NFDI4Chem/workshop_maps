@@ -88,21 +88,21 @@ while m <2 :
 				if labelcheck[1] == 0:
 					topiclabel = 'RDM (planned)'
 					labelcheck[1] = 1
-		else:
-			markersymbol = 's'
-			if status[n] =='done':
-				colordata = nfdi4chempetrol
-				if labelcheck[2] == 0:
-					topiclabel = 'Chemotion ELN (past)'
-					labelcheck[2] = 1
-			else:
-				colordata = nfdi4chemorange
-				if labelcheck[3] == 0:
-					topiclabel = 'Chemotion ELN (planned)'
-					labelcheck[3] = 1
+		#else:
+		#	markersymbol = 's'
+		#	if status[n] =='done':
+		#		colordata = nfdi4chempetrol
+		#		if labelcheck[2] == 0:
+		#			topiclabel = 'Chemotion ELN (past)'
+		#			labelcheck[2] = 1
+		#	else:
+		#		colordata = nfdi4chemorange
+		#		if labelcheck[3] == 0:
+		#			topiclabel = 'Chemotion ELN (planned)'
+		#			labelcheck[3] = 1
 
-		#avoid distortion of the plot by treating the coordinates right
-		# change markersize when multiple events are at the same location
+		##avoid distortion of the plot by treating the coordinates right
+		## change markersize when multiple events are at the same location
 		if city[n] in citychecklist:
 			if citychecklist.count(city[n]) ==1:
 				latfloat=float(lat[n])-0.3
