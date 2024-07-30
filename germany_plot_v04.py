@@ -10,7 +10,8 @@ p = pathlib.Path("output/")
 p.mkdir(parents=True, exist_ok=True)
 
 # output file names
-output="germany_workshops_annotated_rdm.png"
+output="germany_workshops_annotated_rdm_chemotion.png"
+# output="germany_workshops_annotated_rdm.png"
 # output="germany_workshops_annotated_chemotion.png"
 outputlegend="legend_%s"%(output)
 
@@ -50,9 +51,9 @@ while m <2 :
 	mapdf = tmpdf[df["LEVL_CODE"]==1]
 
 	#load information from location.dat
-	city, long, lat, status, topic, kind = np.loadtxt("location_rdm.dat", unpack=True, dtype='str')
+#	city, long, lat, status, topic, kind = np.loadtxt("location_rdm.dat", unpack=True, dtype='str')
 #	city, long, lat, status, topic, kind = np.loadtxt("location_chemotion.dat", unpack=True, dtype='str')
-#	city, long, lat, status, topic, kind = np.loadtxt("location.dat", unpack=True, dtype='str')
+	city, long, lat, status, topic, kind = np.loadtxt("location.dat", unpack=True, dtype='str')
 
 	#define figure
 	fig=plt.figure(figsize=(4,4), dpi=300)
