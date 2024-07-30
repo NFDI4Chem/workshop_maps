@@ -130,12 +130,16 @@ while m <2 :
 			y = locations.geometry.y
 			if city[n]=="Aachen":
 				plt.annotate(city[n], xy=(x,y), xytext=(0,-7.0), textcoords="offset points", ha="center", size="5")
-			elif city[n]=="Bochum" or city[n]=="Mainz":
+			elif city[n]=="Bochum":
 				plt.annotate(city[n], xy=(x,y), xytext=(-4.0,-2.0), textcoords="offset points", ha="right", size="5")	
+			elif city[n]=="Mainz":
+				plt.annotate(city[n], xy=(x,y), xytext=(-8.0,-2.0), textcoords="offset points", ha="right", size="5")					
 			elif city[n]=="Potsdam":
 				plt.annotate(city[n], xy=(x,y), xytext=(4.0,-4.0), textcoords="offset points", size="5")	
 			elif city[n]=="Hannover" or city[n]=="Halle":
 				plt.annotate(city[n], xy=(x,y), xytext=(0,4.0), textcoords="offset points", ha="center", size="5")
+			elif city[n]=="Darmstadt":
+				plt.annotate(city[n], xy=(x,y), xytext=(0,-4.0), textcoords="offset points", ha="center", size="5")
 			else:
 				plt.annotate(city[n], xy=(x,y), xytext=(4.0,-2.0), textcoords="offset points", size="5")
 
