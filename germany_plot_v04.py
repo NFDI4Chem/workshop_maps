@@ -135,7 +135,7 @@ while m <2 :
 			elif city[n]=="Bochum":
 				plt.annotate(city[n], xy=(x,y), xytext=(-4.0,-2.0), textcoords="offset points", ha="right", size="5")	
 			elif city[n]=="Mainz":
-				plt.annotate(city[n], xy=(x,y), xytext=(-9.0,-0.0), textcoords="offset points", ha="right", size="5")					
+				plt.annotate(city[n], xy=(x,y), xytext=(-0.0,6.0), textcoords="offset points", ha="center", size="5")					
 			elif city[n]=="Potsdam":
 				plt.annotate(city[n], xy=(x,y), xytext=(4.0,-4.0), textcoords="offset points", size="5")	
 			elif city[n]=="Hannover" or city[n]=="Halle" or city[n]=="Münster":
