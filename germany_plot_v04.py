@@ -70,39 +70,40 @@ while m <2 :
 	citychecklist = []
 	labelcheck = [0, 0, 0, 0]
 	while n<len(city):
-		topiclabel = None
-		if m == 1:
-			ms = 35
-		elif city[n]=="8xNationalChemotion" or city[n]=="8xNationalRDM":
-			ms = 0
-		else:
-			ms = 20
+		if status[n]=='done':
+			topiclabel = None
+			if m == 1:
+				ms = 35
+			elif city[n]=="8xNationalChemotion" or city[n]=="8xNationalRDM":
+				ms = 0
+			else:
+				ms = 20
 
-		#plot locations dependend of status and topic, kind is not taken into account
-		if topic[n] =='RDM' and status[n]=='done':
-			markersymbol = 'o'
-			if status[n] =='done':
-				colordata = nfdi4chempetrol
-				if labelcheck[0] == 0:
-					topiclabel = 'RDM (past)'
-					labelcheck[0] = 1
-			else:
-				colordata = nfdi4chemorange
-				if labelcheck[1] == 0:
-					topiclabel = 'RDM (planned)'
-					labelcheck[1] = 1
-		elif topic[n] =='Chemotion':
-			markersymbol = 's'
-			if status[n] =='done':
-				colordata = nfdi4chempetrol
-				if labelcheck[2] == 0:
-					topiclabel = 'Chemotion ELN (past)'
-					labelcheck[2] = 1
-			else:
-				colordata = nfdi4chemorange
-				if labelcheck[3] == 0:
-					topiclabel = 'Chemotion ELN (planned)'
-					labelcheck[3] = 1
+			#plot locations dependend of status and topic, kind is not taken into account
+			if topic[n] =='RDM' and status[n]=='done':
+				markersymbol = 'o'
+				if status[n] =='done':
+					colordata = nfdi4chempetrol
+					if labelcheck[0] == 0:
+						topiclabel = 'RDM (past)'
+						labelcheck[0] = 1
+				else:
+					colordata = nfdi4chemorange
+					if labelcheck[1] == 0:
+						topiclabel = 'RDM (planned)'
+						labelcheck[1] = 1
+			elif topic[n] =='Chemotion':
+				markersymbol = 's'
+				if status[n] =='done':
+					colordata = nfdi4chempetrol
+					if labelcheck[2] == 0:
+						topiclabel = 'Chemotion ELN (past)'
+						labelcheck[2] = 1
+				else:
+					colordata = nfdi4chemorange
+					if labelcheck[3] == 0:
+						topiclabel = 'Chemotion ELN (planned)'
+						labelcheck[3] = 1
 
 		#avoid distortion of the plot by treating the coordinates right
 		# change markersize when multiple events are at the same location
