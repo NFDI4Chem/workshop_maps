@@ -10,8 +10,8 @@ p = pathlib.Path("output/")
 p.mkdir(parents=True, exist_ok=True)
 
 # output file names
-output="germany_workshops_annotated_rdm_chemotion.png"
-# output="germany_workshops_annotated_rdm.png"
+# output="germany_workshops_annotated_rdm_chemotion.png"
+output="germany_workshops_annotated_rdm_done.png"
 # output="germany_workshops_annotated_chemotion.png"
 outputlegend="legend_%s"%(output)
 
@@ -79,7 +79,7 @@ while m <2 :
 			ms = 20
 
 		#plot locations dependend of status and topic, kind is not taken into account
-		if topic[n] =='RDM':
+		if topic[n] =='RDM' and status[n]=='done':
 			markersymbol = 'o'
 			if status[n] =='done':
 				colordata = nfdi4chempetrol
