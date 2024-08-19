@@ -91,7 +91,7 @@ while m <2 :
 				if labelcheck[1] == 0:
 					topiclabel = 'RDM (planned)'
 					labelcheck[1] = 1
-		else:
+		elif topic[n] =='Chemotion':
 			markersymbol = 's'
 			if status[n] =='done':
 				colordata = nfdi4chempetrol
