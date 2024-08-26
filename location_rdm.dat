@@ -8,6 +8,8 @@ Halle 51.5 12 done RDM inperson
 Leipzig 51.339695 12.373075 done RDM inperson
 Liverpool 53.400002 -2.983333 done RDM online
 Mainz 49.992863 8.247253 done RDM inperson
+Mainz 49.992863 8.247253 done RDM inperson
+Mainz 49.992863 8.247253 done RDM inperson
 Marburg 50.80904 8.77069 done RDM online
 Münster 51.960667 7.626135 done RDM online
 Rostock 54.083336 12.108811 done RDM inperson
@@ -24,4 +26,6 @@ Bochum 51.48165 7.21648 planned RDM inperson
 Darmstadt 49.87167 8.65027 planned RDM inperson
 Leipzig 51.339695 12.373075 planned RDM inperson
 Stuttgart 48.783333 9.183333 planned RDM inperson
-international 50.15 12.75000 done RDM inperson
+national 50.15 12.75000 done RDM inperson
+international 49.75 12.75000 done RDM inperson
+
