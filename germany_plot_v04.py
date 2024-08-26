@@ -122,10 +122,23 @@ while m <2 :
 #			ms = standardms
 			coordinates = {"latitude": [long[n]], "longitude": [lat[n]]}
 			dftest = pd.DataFrame(coordinates)
-		locations = geopandas.GeoDataFrame(coordinates, geometry=geopandas.points_from_xy(dftest.longitude, dftest.latitude),crs = "EPSG:4326")
+		
+		if topic[n] =='RDM' and status[n]=='done':
+			markersymbol = 'o'
+			if status[n] =='done':
+				colordata = nfdi4chempetrol
+				if labelcheck[0] == 0:
+					topiclabel = 'RDM (past)'
+					labelcheck[0] = 1
+			else:
+				colordata = nfdi4chemorange
+				if labelcheck[1] == 0:
+					topiclabel = 'RDM (planned)'
+					labelcheck[1] = 1
+			locations = geopandas.GeoDataFrame(coordinates, geometry=geopandas.points_from_xy(dftest.longitude, dftest.latitude),crs = "EPSG:4326")
 
 #		locations.plot(ax=ax, marker=markersymbol, markersize=ms, color=colordata, label=topiclabel, linestyle='None') #style 01, style 02 borderstyle 01
-		locations.plot(ax=ax, marker=markersymbol, markersize=ms, color=colordata, label=topiclabel, linestyle='None', edgecolor="black", linewidth=0.2) #style 03
+			locations.plot(ax=ax, marker=markersymbol, markersize=ms, color=colordata, label=topiclabel, linestyle='None', edgecolor="black", linewidth=0.2) #style 03
 # add location name to point
 		if not city[n] in citychecklist:
 			x = locations.geometry.x
