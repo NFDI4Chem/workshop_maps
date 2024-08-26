@@ -170,7 +170,7 @@ while m <2 :
 		
 	if m==0:
 		plt.axis([5,15.2,47,55])
-		plt.title("workshops")
+		plt.title(" ")
 		plt.axis('off')
 		plt.savefig(output, bbox_inches='tight', pad_inches=0.05, transparent=True)
 	else:
