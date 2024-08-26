@@ -127,14 +127,14 @@ while m <2 :
 			markersymbol = 'o'
 			if status[n] =='done':
 				colordata = nfdi4chempetrol
-				if labelcheck[0] == 0:
-					topiclabel = 'RDM (past)'
-					labelcheck[0] = 1
+#				if labelcheck[0] == 0:
+#					topiclabel = 'RDM (past)'
+#					labelcheck[0] = 1
 			else:
 				colordata = nfdi4chemorange
-				if labelcheck[1] == 0:
-					topiclabel = 'RDM (planned)'
-					labelcheck[1] = 1
+#				if labelcheck[1] == 0:
+#					topiclabel = 'RDM (planned)'
+#					labelcheck[1] = 1
 			locations = geopandas.GeoDataFrame(coordinates, geometry=geopandas.points_from_xy(dftest.longitude, dftest.latitude),crs = "EPSG:4326")
 
 #		locations.plot(ax=ax, marker=markersymbol, markersize=ms, color=colordata, label=topiclabel, linestyle='None') #style 01, style 02 borderstyle 01
