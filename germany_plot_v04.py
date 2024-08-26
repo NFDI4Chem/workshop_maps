@@ -158,10 +158,10 @@ while m <2 :
 					plt.annotate(city[n], xy=(x,y), xytext=(0,-6.0), textcoords="offset points", ha="center", size="5")
 				elif city[n]=="8xNationalChemotion":
 					plt.annotate("+ 9 national Chemotion WS", xy=(x,y), xytext=(0.0,-2.0), textcoords="offset points", size="5")
-				elif city[n]=="8xNationalRDM":
-					plt.annotate("+ 8 national RDM WS", xy=(x,y), xytext=(0.0,-2.0), textcoords="offset points", size="5")
+				elif city[n]=="national":
+					plt.annotate("8x national", xy=(x,y), xytext=(4.0,-2.0), textcoords="offset points", size="5")
 				elif city[n]=="international":
-					plt.annotate("Liverpool and Brünn", xy=(x,y), xytext=(4.0,-2.0), textcoords="offset points", size="5")
+					plt.annotate("2x international", xy=(x,y), xytext=(4.0,-2.0), textcoords="offset points", size="5")
 				else:
 					plt.annotate(city[n], xy=(x,y), xytext=(4.0,-2.0), textcoords="offset points", size="5")
 
