@@ -154,8 +154,8 @@ while m <2 :
 				#elif city[n]=="Hannover" or city[n]=="Halle" or city[n]=="Münster":
 				elif city[n]=="Hannover" or city[n]=="Halle":
 					plt.annotate(city[n], xy=(x,y), xytext=(0,4.0), textcoords="offset points", ha="center", size="5")
-				elif city[n]=="Darmstadt":
-					plt.annotate(city[n], xy=(x,y), xytext=(0,-6.0), textcoords="offset points", ha="center", size="5")
+				#elif city[n]=="Darmstadt":
+					#plt.annotate(city[n], xy=(x,y), xytext=(0,-6.0), textcoords="offset points", ha="center", size="5")
 				elif city[n]=="8xNationalChemotion":
 					plt.annotate("+ 9 national Chemotion WS", xy=(x,y), xytext=(0.0,-2.0), textcoords="offset points", size="5")
 				elif city[n]=="national":
