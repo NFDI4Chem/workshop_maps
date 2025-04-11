@@ -146,7 +146,7 @@ while m <2 :
 			if not city[n] in citychecklist:
 				x = locations.geometry.x
 				y = locations.geometry.y
-				if city[n]=="Aachen" or city[n]=="Saarbrücken" or city[n]=="Straubingen":
+				if city[n]=="Aachen" or city[n]=="Saarbrücken" or city[n]=="Straubing":
 					plt.annotate(city[n], xy=(x,y), xytext=(0,-7.0), textcoords="offset points", ha="center", size="5")
 				elif city[n]=="Bochum":
 					plt.annotate(city[n], xy=(x,y), xytext=(-4.0,-2.0), textcoords="offset points", ha="right", size="5")	
@@ -166,11 +166,11 @@ while m <2 :
 				elif city[n]=="international":
 					plt.annotate("2x international", xy=(x,y), xytext=(4.0,-2.0), textcoords="offset points", size="5")
 				elif city[n]=="9xChemotion":
-					plt.annotate("9 national Chemotion", xy=(x,y), xytext=(0.0,-2.0), textcoords="offset points", size="5")
+					plt.annotate("9 national Chemotion", xy=(x,y), xytext=(4.0,-0.0), textcoords="offset points", size="5")
 				elif city[n]=="4xLabIMotion":
-					plt.annotate("4x national LabIMotion", xy=(x,y), xytext=(4.0,-2.0), textcoords="offset points", size="5")
+					plt.annotate("4x national LabIMotion", xy=(x,y), xytext=(4.0,-1.5), textcoords="offset points", size="5")
 				elif city[n]=="1xinternational":
-					plt.annotate("1x international", xy=(x,y), xytext=(4.0,-2.0), textcoords="offset points", size="5")
+					plt.annotate("1x international", xy=(x,y), xytext=(4.0,-3.0), textcoords="offset points", size="5")
 				else:
 					plt.annotate(city[n], xy=(x,y), xytext=(4.0,-2.0), textcoords="offset points", size="5")
 
