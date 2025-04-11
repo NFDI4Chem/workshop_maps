@@ -76,6 +76,7 @@ while m <2 :
 		elif city[n]=="8xNationalChemotion" or city[n]=="8xNationalRDM":
 			ms = 0
 		elif city[n]=="9xChemotion" or city[n]=="4xLabIMotion" or city[n]=="1xinternational":
+			ms = 0
 		else:
 			ms = 20
 
