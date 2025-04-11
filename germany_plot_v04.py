@@ -165,7 +165,7 @@ while m <2 :
 					plt.annotate("8x national", xy=(x,y), xytext=(4.0,-2.0), textcoords="offset points", size="5")
 				elif city[n]=="international":
 					plt.annotate("2x international", xy=(x,y), xytext=(4.0,-2.0), textcoords="offset points", size="5")
-				elif city[n]=="9xChemotion:
+				elif city[n]=="9xChemotion":
 					plt.annotate("9 national Chemotion", xy=(x,y), xytext=(0.0,-2.0), textcoords="offset points", size="5")
 				elif city[n]=="4xLabIMotion":
 					plt.annotate("4x national LabIMotion", xy=(x,y), xytext=(4.0,-2.0), textcoords="offset points", size="5")
