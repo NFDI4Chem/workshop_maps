@@ -51,8 +51,8 @@ while m <2 :
 	mapdf = tmpdf[df["LEVL_CODE"]==1]
 
 	#load information from location.dat
-	city, long, lat, status, topic, kind = np.loadtxt("location_rdm.dat", unpack=True, dtype='str')
-#	city, long, lat, status, topic, kind = np.loadtxt("location_chemotion.dat", unpack=True, dtype='str')
+#	city, long, lat, status, topic, kind = np.loadtxt("location_rdm.dat", unpack=True, dtype='str')
+	city, long, lat, status, topic, kind = np.loadtxt("location_chemotion.dat", unpack=True, dtype='str')
 #	city, long, lat, status, topic, kind = np.loadtxt("location.dat", unpack=True, dtype='str')
 
 	#define figure
@@ -75,6 +75,7 @@ while m <2 :
 			ms = 35
 		elif city[n]=="8xNationalChemotion" or city[n]=="8xNationalRDM":
 			ms = 0
+		elif city[n]=="9xChemotion" or city[n]=="4xLabIMotion" or city[n]=="1xinternational"
 		else:
 			ms = 20
 
