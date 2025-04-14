@@ -126,7 +126,8 @@ while m <2 :
 			dftest = pd.DataFrame(coordinates)
 		
 #		if topic[n] =='RDM' and status[n]=='done':
-		if topic[n] =='Chemotion' and status[n]=='done':
+#		if topic[n] =='Chemotion' and status[n]=='done':
+		if topic[n] =='Chemotion':
 			markersymbol = 'o'
 			if status[n] =='done':
 				colordata = nfdi4chempetrol
