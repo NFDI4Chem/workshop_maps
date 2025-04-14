@@ -147,7 +147,7 @@ while m <2 :
 			if not city[n] in citychecklist:
 				x = locations.geometry.x
 				y = locations.geometry.y
-				if city[n]=="Aachen" or city[n]=="Saarbrücken" or city[n]=="Straubing":
+				if city[n]=="Aachen" or city[n]=="Saarbrücken" or city[n]=="Straubing" or city[n]=="Münster":
 					plt.annotate(city[n], xy=(x,y), xytext=(0,-7.0), textcoords="offset points", ha="center", size="5")
 				elif city[n]=="Bochum":
 					plt.annotate(city[n], xy=(x,y), xytext=(-4.0,-2.0), textcoords="offset points", ha="right", size="5")	
@@ -156,7 +156,7 @@ while m <2 :
 				elif city[n]=="Potsdam":
 					plt.annotate(city[n], xy=(x,y), xytext=(4.0,-4.0), textcoords="offset points", size="5")	
 				#elif city[n]=="Hannover" or city[n]=="Halle" or city[n]=="Münster":
-				elif city[n]=="Hannover" or city[n]=="Halle":
+				elif city[n]=="Hannover" or city[n]=="Halle" or city[n]=="Regensburg":
 					plt.annotate(city[n], xy=(x,y), xytext=(0,4.0), textcoords="offset points", ha="center", size="5")
 				#elif city[n]=="Darmstadt":
 					#plt.annotate(city[n], xy=(x,y), xytext=(0,-6.0), textcoords="offset points", ha="center", size="5")
